@@ -6,307 +6,79 @@
     <meta name="description" content="Portafolio profesional de Tupac Trump, asesor comercial en Medellín, Colombia.">
     <meta name="theme-color" content="#f4f2ec">
     <title>Tupac Trump | Asesor comercial</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            color-scheme: light;
-            --paper: #f4f2ec;
-            --ink: #18211d;
-            --muted: #68716b;
-            --line: #d9ddd5;
-            --green: #c8f169;
-            --forest: #244d3d;
-            --white: #fffefa;
-            --body-font: "DM Sans", sans-serif;
-            --display-font: "Manrope", sans-serif;
-        }
-
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            margin: 0;
-            background: var(--paper);
-            color: var(--ink);
-            font-family: var(--body-font);
-            -webkit-font-smoothing: antialiased;
-        }
-        a { color: inherit; }
-        .shell { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
-        .topbar {
-            height: 84px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--line);
-        }
-        .brand { display: flex; gap: 11px; align-items: center; text-decoration: none; font-weight: 700; }
-        .brand-mark {
-            width: 34px;
-            height: 34px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--green);
-            font-family: var(--display-font);
-            font-size: 14px;
-        }
-        .nav { display: flex; gap: 34px; align-items: center; }
-        .nav a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 180ms ease; }
-        .nav a:hover { color: var(--ink); }
-        .nav .nav-contact { color: var(--ink); font-weight: 700; }
-
-        .hero {
-            min-height: 610px;
-            display: grid;
-            grid-template-columns: 1.08fr .92fr;
-            gap: 54px;
-            align-items: center;
-            padding: 68px 0 76px;
-        }
-        .eyebrow {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0 0 24px;
-            color: var(--forest);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-        }
-        .eyebrow::before { width: 24px; height: 2px; background: var(--forest); content: ""; }
-        h1, h2, h3, p { margin-top: 0; }
-        h1 {
-            max-width: 620px;
-            margin-bottom: 22px;
-            font-family: var(--display-font);
-            font-size: clamp(48px, 6.3vw, 78px);
-            font-weight: 600;
-            letter-spacing: 0;
-            line-height: 1.04;
-        }
-        h1 span { color: var(--forest); }
-        .hero-copy > p:not(.eyebrow) { max-width: 460px; margin-bottom: 30px; color: var(--muted); font-size: 16px; line-height: 1.8; }
-        .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-        .button {
-            min-height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-            border: 1px solid var(--ink);
-            border-radius: 3px;
-            background: var(--ink);
-            color: var(--white);
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: background 180ms ease, color 180ms ease, transform 180ms ease;
-        }
-        .button:hover { transform: translateY(-2px); background: var(--forest); }
-        .button.secondary { background: transparent; color: var(--ink); }
-        .button.secondary:hover { background: var(--green); }
-        .hero-visual { position: relative; min-height: 425px; }
-        .hero-image {
-            position: absolute;
-            inset: 8px 28px 25px 26px;
-            width: calc(100% - 54px);
-            height: calc(100% - 33px);
-            object-fit: cover;
-            object-position: center;
-            filter: saturate(.77);
-        }
-        .image-frame { position: absolute; inset: 0 0 42px 53px; border: 1px solid var(--forest); }
-        .availability {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 205px;
-            padding: 19px 20px;
-            background: var(--green);
-        }
-        .availability strong { display: block; margin-bottom: 5px; font-family: var(--display-font); font-size: 17px; }
-        .availability span { color: #344131; font-size: 12px; }
-        .hero-index { position: absolute; left: 0; bottom: 8px; color: var(--muted); font-size: 11px; letter-spacing: 1px; writing-mode: vertical-rl; }
-
-        .intro-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-        .strip-inner { min-height: 85px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
-        .strip-label { color: var(--muted); font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; }
-        .strip-values { display: flex; flex-wrap: wrap; gap: 13px 28px; font-size: 13px; font-weight: 600; }
-        .strip-values span::before { margin-right: 9px; color: var(--forest); content: "+"; }
-
-        .section { padding: 112px 0; }
-        .section-heading { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; margin-bottom: 55px; }
-        .section-heading .eyebrow { margin-top: 9px; }
-        h2 { margin-bottom: 0; font-family: var(--display-font); font-size: clamp(34px, 4vw, 48px); font-weight: 600; letter-spacing: 0; line-height: 1.14; }
-        .section-heading p { max-width: 510px; margin: 15px 0 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
-        .experience { border-top: 1px solid var(--line); }
-        .job {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 55px;
-            padding: 32px 0 36px;
-            border-bottom: 1px solid var(--line);
-        }
-        .job h3 { margin: 0 0 5px; font-family: var(--display-font); font-size: 23px; font-weight: 700; }
-        .job-title { color: var(--forest); font-size: 13px; font-weight: 700; }
-        .job p { max-width: 540px; margin: 1px 0 16px; color: var(--muted); font-size: 14px; line-height: 1.75; }
-        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag { padding: 7px 10px; border: 1px solid var(--line); border-radius: 2px; color: #4b554e; font-size: 11px; }
-
-        .approach { background: var(--forest); color: var(--white); }
-        .approach .eyebrow { color: var(--green); }
-        .approach .eyebrow::before { background: var(--green); }
-        .approach-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 55px; align-items: start; }
-        .approach h2 { max-width: 400px; }
-        .approach-copy { color: #d1dbd2; font-size: 15px; line-height: 1.9; }
-        .approach-copy p { margin: 0 0 18px; }
-        .approach-note { display: inline-block; margin-top: 12px; padding: 12px 15px; border-left: 2px solid var(--green); color: var(--green); font-size: 13px; }
-
-        .contact { padding: 105px 0 88px; }
-        .contact-panel { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; padding: 44px; background: var(--green); }
-        .contact-panel .eyebrow { color: var(--forest); }
-        .contact-panel .eyebrow::before { background: var(--forest); }
-        .contact-panel h2 { max-width: 620px; font-size: clamp(34px, 4.5vw, 54px); }
-        .contact-links { display: grid; gap: 10px; justify-items: end; }
-        .contact-links a { font-size: 13px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-        footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .hero-copy, .hero-visual { animation: arrive 650ms both; }
-            .hero-visual { animation-delay: 120ms; }
-            @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        }
-        @media (max-width: 760px) {
-            .shell { width: min(100% - 40px, 560px); }
-            .topbar { height: 72px; }
-            .nav { gap: 17px; }
-            .nav a { font-size: 12px; }
-            .nav a:nth-child(2) { display: none; }
-            .hero { min-height: initial; grid-template-columns: 1fr; gap: 38px; padding: 66px 0 54px; }
-            h1 { max-width: 520px; font-size: clamp(48px, 12vw, 68px); }
-            .hero-visual { min-height: 340px; }
-            .strip-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 20px 0; }
-            .strip-values { gap: 12px 18px; }
-            .section { padding: 78px 0; }
-            .section-heading, .job, .approach-grid { grid-template-columns: 1fr; gap: 22px; }
-            .section-heading { margin-bottom: 36px; }
-            .job { gap: 13px; }
-            .contact { padding: 76px 0 60px; }
-            .contact-panel { grid-template-columns: 1fr; padding: 30px 24px; }
-            .contact-links { justify-items: start; }
-        }
-        @media (max-width: 420px) {
-            .shell { width: calc(100% - 32px); }
-            .brand { font-size: 13px; }
-            .nav { gap: 12px; }
-            .nav a { font-size: 11px; }
-            .hero-visual { min-height: 285px; }
-            .availability { width: 185px; padding: 15px; }
-            footer { flex-direction: column; }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="shell topbar">
-        <a class="brand" href="#inicio" aria-label="Tupac Trump, inicio">
-            <span class="brand-mark" aria-hidden="true">TT</span>
-            <span>Tupac Trump</span>
+
+    <header> <h1><strong>Hoja de Vida Felipe Perez Vargas</strong></h1>
+        <div class="header-content">
+        <img src="./img/higher-quality-version-of-that-one-roland-image-i-keep-v0-zpfjkarz8pkd1.webp" alt="Foto de Felipe Perez Vargas" class="header-img" aria-hidden="true">
+        </div>
+            <span aria-hidden="true">FP</span>
+            <span>Felipe Perez Vargas</span>
         </a>
-        <nav class="nav" aria-label="Navegación principal">
-            <a href="#perfil">Perfil</a>
-            <a href="#experiencia">Experiencia</a>
-            <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
-        </nav>
+        <p>
+            Coder | Asesor de ventas | Ingles | Perspicaz | Estudiante de Desarrollo de Software 
+        </p>
+        <p>Medellín, Colombia · Perfil profesional</p>
     </header>
 
     <main>
-        <section class="shell hero" id="inicio">
-            <div class="hero-copy">
-                <p class="eyebrow">Medellín, Colombia · Perfil profesional</p>
-                <h1>Las buenas relaciones también <span>impulsan ventas.</span></h1>
-                <p>Asesor comercial con experiencia en servicio al cliente y operación de tienda. Me interesa entender lo que cada persona necesita y ayudar a que la experiencia de compra sea clara, cercana y ágil.</p>
-                <div class="actions">
-                    <a class="button" href="#contacto">Hablemos <span aria-hidden="true">&nbsp;↗</span></a>
-                    <a class="button secondary" href="#experiencia">Ver experiencia</a>
-                </div>
-            </div>
-            <div class="hero-visual" aria-label="Interior de una tienda">
-                <div class="image-frame" aria-hidden="true"></div>
-                <img class="hero-image" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Interior luminoso de una tienda de ropa">
-                <span class="hero-index" aria-hidden="true">01 / PERFIL</span>
-                <div class="availability"><strong>Servicio con intención</strong><span>Atención, orden y seguimiento</span></div>
-            </div>
-        </section>
-
-        <div class="intro-strip">
-            <div class="shell strip-inner">
-                <span class="strip-label">Experiencia práctica en</span>
-                <div class="strip-values"><span>Atención al cliente</span><span>Ventas</span><span>Inventario</span><span>Operación de tienda</span></div>
-            </div>
-        </div>
-
-        <section class="shell section" id="perfil">
-            <div class="section-heading">
-                <p class="eyebrow">01 — Perfil</p>
+        <section id="inicio">
+            <div>
+                
+                <h1>Quien soy</h1>
+                <p>Estudiante de desarrollo de software con experencia en asesoramiento de ventas, manejo de bodega y atencion al cliente,
+                    cuento con experencia en campos de programacion con lenguajes basicos como java, python y c++ y con conocimientos en desarrollo web con html, css y javascript.
+                </p>
                 <div>
-                    <h2>Trato cercano. Trabajo bien hecho.</h2>
-                    <p>Soy una persona proactiva, colaboradora y con interés genuino por aprender. Disfruto el trabajo con clientes y equipos, y me motiva crecer en el mundo comercial mientras aporto a cada tarea del día a día.</p>
+                    <a href="#contacto">Hablemos <span aria-hidden="true"></span></a>
                 </div>
-            </div>
-            <div class="tag-list" aria-label="Fortalezas profesionales">
-                <span class="tag">Servicio y atención</span>
-                <span class="tag">Manejo de caja</span>
-                <span class="tag">Control de inventario</span>
-                <span class="tag">Apoyo en bodega</span>
-                <span class="tag">Preparación de pedidos</span>
-                <span class="tag">Trabajo en equipo</span>
-            </div>
-        </section>
+            </div> 
 
-        <section class="shell section" id="experiencia">
-            <div class="section-heading">
-                <p class="eyebrow">02 — Trayectoria</p>
+        <section id="perfil">
+            <div>
+                <p>01 — Perfil</p>
                 <div>
-                    <h2>Experiencia que suma en cada frente.</h2>
-                    <p>Atención comercial y soporte operativo, con disposición para asumir responsabilidades y mantener el trabajo organizado.</p>
+                    <h2>Pasion como desarrollador.</h2>
+                    <p>Me apasiona crear soluciones innovadoras y eficientes. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades para contribuir al éxito del equipo.</p>
                 </div>
             </div>
-            <div class="experience">
-                <article class="job">
-                    <div><h3>Monastery</h3><span class="job-title">Asesor comercial</span></div>
-                    <div>
-                        <p>Atención y acompañamiento al cliente durante su compra, junto con tareas de caja, inventario y apoyo a la operación de bodega.</p>
-                        <div class="tag-list"><span class="tag">Atención al cliente</span><span class="tag">Caja registradora</span><span class="tag">Inventario</span><span class="tag">Bodega</span></div>
-                    </div>
-                </article>
-                <article class="job">
-                    <div><h3>Niñolandia</h3><span class="job-title">Bodeguero</span></div>
-                    <div>
-                        <p>Organización de bodega y control de existencias, con preparación de pedidos y apoyo en las tareas de recepción y despacho.</p>
-                        <div class="tag-list"><span class="tag">Organización de bodega</span><span class="tag">Inventario</span><span class="tag">Despacho de pedidos</span><span class="tag">Cargue y descargue</span></div>
-                    </div>
-                </article>
+            <div>
+                <h2>Fortalezas profesionales</h2>
+                <h3>Competencias Tecnicas</h3>
+                <ul>
+                    <li>Programación en Java, Python y C++</li>
+                    <li>Desarrollo web con HTML, CSS y JavaScript</li>
+                    <li>Bases de datos y SQL</li>
+                </ul>
+                <h3>Competencias Blandas</h3>
+                <ul>
+                    <li>Comunicación efectiva</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Resolución de problemas</li>
+                </ul>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español (Nativo)</li>
+                    <li>Inglés (Intermedio-Avanzado)</li>
+                </ul>
+
+                <h3>Hobbies</h3>
+                <ol>
+                    <li>VideoJuegos</li>
+                    <li>Practicar deportes (Fútbol, Baloncesto, Pingpong, Volleyball)</li>
+                    <li>Escuchar música</li>
+                </ol>
+
             </div>
         </section>
 
-        <section class="approach" aria-labelledby="approach-title">
-            <div class="shell section approach-grid">
-                <div><p class="eyebrow">03 — Mi enfoque</p><h2 id="approach-title">Cada cliente merece ser escuchado.</h2></div>
-                <div class="approach-copy">
-                    <p>Una buena atención empieza por escuchar, entender y responder con claridad. En ventas, eso significa acompañar sin presionar y cuidar también los detalles que hacen que una tienda funcione bien.</p>
-                    <p>Me gusta aprender cada día, ayudar a quienes me rodean y aportar con energía tanto en el trato con las personas como en las tareas operativas.</p>
-                    <span class="approach-note">Interés profesional: seguir creciendo en el área comercial.</span>
-                </div>
-            </div>
-        </section>
 
-        <section class="shell contact" id="contacto">
-            <div class="contact-panel">
-                <div><p class="eyebrow">04 — Contacto</p><h2>¿Hablamos de una oportunidad?</h2></div>
-                <div class="contact-links">
+        <section id="contacto">
+            <div>
+                <div><p>02 — Contacto</p><h2>¿Hablamos de una oportunidad?</h2></div>
+                <div>
                     <a href="mailto:tupacbandido777@gmail.com">tupacbandido777@gmail.com</a>
                     <a href="tel:+573215896587">+57 321 589 6587</a>
                     <span>Medellín, Colombia</span>
@@ -315,6 +87,5 @@
         </section>
     </main>
 
-    <footer class="shell"><span>Tupac Trump · Asesor comercial</span><span>Medellín, Colombia</span></footer>
 </body>
 </html>

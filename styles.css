@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-content .header-img {
+    display: block !important;
+
+    width: 90px !important;
+    height: 90px !important;
+
+    max-width: 90px !important;
+    min-width: 90px !important;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    flex-shrink: 0;
+}
